@@ -49,14 +49,22 @@ override func didReceiveMemoryWarning() {
     func makeResultCollectionAndPicture() {
             for (key, value) in foodMenu.menuCollection {
             let result = appDelegate.myChoice
-            if result[result.count - 1] == " " {
-                resultCollection.append(key)
-                //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장. 검증 필요.
+            if result[result.count - 1] == " " && result[1] == "식사" {
+                resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
+                //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장(식사).
+                } else if result[result.count - 1] == " " && result[1] == "간편식" {
+                resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
+                //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장(간편식).
                 } else if result == value {
-                resultCollection.append(key)
+                resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
                 //선택지 배열과 메뉴들의 속성이 같으면 결과값 저장 메뉴에 저장
                 }
         }
+        
+        
+        
+        
+        
                 randomNumber = Int(arc4random_uniform((UInt32(resultCollection.count))))
             if resultCollection.count != 0 {
                 menuName.text = resultCollection[randomNumber]
