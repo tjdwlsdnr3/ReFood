@@ -18,6 +18,7 @@ var resultCollection = [String]()
 class ResultViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var randomNumber : Int!
+    var searchKeyMenu : String!
     var interstitial : GADInterstitial!
 
     @IBOutlet var listShow: UIButton!
@@ -47,43 +48,75 @@ override func didReceiveMemoryWarning() {
     }
     
     func makeResultCollectionAndPicture() {
+        let result = appDelegate.myChoice
+        if result[1] == "식사" {
             for (key, value) in foodMenu.menuCollection {
-            let result = appDelegate.myChoice
-            if result[result.count - 1] == " " && result[1] == "식사" {
+            if result[result.count - 1] == " " {
                 resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
                 //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장(식사).
-                } else if result[result.count - 1] == " " && result[1] == "간편식" {
-                resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
-                //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장(간편식).
                 } else if result == value {
                 resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
                 //선택지 배열과 메뉴들의 속성이 같으면 결과값 저장 메뉴에 저장
                 }
         }
-        
-        
-        
-        
-        
-                randomNumber = Int(arc4random_uniform((UInt32(resultCollection.count))))
-            if resultCollection.count != 0 {
-                menuName.text = resultCollection[randomNumber]
-                for (key, value) in foodMenu.menuPicture {
-                    if menuName.text == key {
-                        imgView.image = value
-                        appDelegate.myLocation.updateValue(menuName.text!, forKey: "query")
-                    }
-                    }
-            } else if resultCollection.count == 0 {
-                wouldYou.isHidden = true
-                menuName.text! = "메뉴 선정에 실패했습니다....ㅠ_ㅠ"
-                imgView.image = #imageLiteral(resourceName: "nuclear_bomb")
-                listShow.isHidden = true
+        } else if result[1] == "술안주" {
+            for (key, value) in foodMenu.sideDishCollection {
+                if result[result.count - 1] == " " {
+                    resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
+                    //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장(술안주).
+                } else if result == value {
+                    resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
+                    //선택지 배열과 메뉴들의 속성이 같으면 결과값 저장 메뉴에 저장
+                }
+            }
+        } else if result[1] == "간편식" {
+            for (key, value) in foodMenu.CVCollection {
+                if result[result.count - 1] == " " {
+                    resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
+                    //선택지 저장 배열의 마지막이 " "(아무거나)이면 메뉴컬렉션의 모든 키값을 배열에 저장(간편식).
+                } else if result == value {
+                    resultCollection.append(key.trimmingCharacters(in: CharacterSet.whitespaces))
+                    //선택지 배열과 메뉴들의 속성이 같으면 결과값 저장 메뉴에 저장
+                }
+            }
         }
+                randomNumber = Int(arc4random_uniform((UInt32(resultCollection.count))))
+        var whetherThereIsAPictureOfMenu : [UIImage] = []
+            if resultCollection.count != 0 {
+                menuName.text! = resultCollection[randomNumber]
+                searchKeyMenu = menuName.text!
+                switch searchKeyMenu {
+                case "떡튀순" :
+                    searchKeyMenu = "분식"
+                case "삼각김밥", "컵라면", "도시락", "핫도그", "샌드위치", "만두", "시리얼" :
+                    searchKeyMenu = "편의점"
+                default :
+                    break
+                }
+                print("searchKeyMenu : \(searchKeyMenu)")
+                appDelegate.myLocation.updateValue(menuName.text!, forKey: "query")
+                for (key, value) in foodMenu.menuPicture {
+                    if menuName.text! == key {
+                        whetherThereIsAPictureOfMenu.append(value)
+                        //메뉴명이 menuPicture 배열의 key와 일치한다면 whetherThereIsAPictureOfMenu 배열에 해당 key의 value를 집어넣는다.
+                        //만약에 일치하는 key가 없다면 배열에 넣을 수 없겠지?
+                    }
+                    if whetherThereIsAPictureOfMenu.count == 0 {
+                        imgView.image = #imageLiteral(resourceName: "noneCat")
+                        //일치하는 key가 없어서 배열의 요소 갯수가 0이면 noneCat 사진을 넣고
+                    } else {
+                        imgView.image = whetherThereIsAPictureOfMenu[0]
+                        //일치하는 key가 있어서 배열에 value값이 추가된 경우에는 해당 사진을 imageView의 image로 노출~
+                    }
+        }
+            } else {
+                //if resultCollection.count != 0의 else구문. 즉 결과값이 없을 경우의 분기처리.
+    wouldYou.isHidden = true
+    menuName.text! = "메뉴 선정에 실패했습니다....ㅠ_ㅠ"
+    imgView.image = #imageLiteral(resourceName: "noneCat")
+    listShow.isHidden = true
     }
-    
-    
-    
+    }
     
     
     //재시작 버튼 - 처음 실행해서 위치정보 얻은 사람이 재시작 할때는 위치정보 받는 함수 실행 안되도록 만들기
@@ -92,15 +125,14 @@ override func didReceiveMemoryWarning() {
         resultCollection.removeAll() //선택지에 따른 메뉴 저장하는 배열 초기화
         print("restartmyChoice: \(appDelegate.myChoice)")
         print("restartResultCollection: \(resultCollection)")
-        appDelegate.runUpdateLocationFunction = false
+        appDelegate.runUpdateLocationFunction = false //함수업데이트 값을 false로 처리.
         performSegue(withIdentifier: "goRestart", sender: self)
     }
     
     @IBAction func goList(_ sender: UIButton) {
-        let searchWord = "\(appDelegate.myAddress) \(menuName.text!)"
-        print(searchWord)
-//        let searchAddress = "http://m.search.naver.com/search.naver?query=\(searchWord)"
-        let searchAddress = "https://store.naver.com/restaurants/list?filterId=r07680109&menu=\(menuName.text!)&query=\(appDelegate.myAddress) 맛집"
+        
+        let searchAddress = "https://store.naver.com/restaurants/list?filterId=r07680109&menu=\(searchKeyMenu!)&query=\(appDelegate.myAddress) 맛집"
+        print(searchAddress)
         if let encodedURL = searchAddress.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
             let url = URL(string: encodedURL) {
             let safariViewController = SFSafariViewController(url: url)
