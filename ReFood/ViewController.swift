@@ -13,11 +13,14 @@ import CoreLocation
 class ViewController: UIViewController, GADBannerViewDelegate, CLLocationManagerDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     @IBOutlet var firstViewControllerButtons: UIButton!
+    @IBOutlet var reUpdateLocationButton: UIButton!
+    
     let locationManager = CLLocationManager()
    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        reUpdateLocationButton.isHidden = true
         addBannerViewToView(appDelegate.bannerView)
         appDelegate.bannerView.rootViewController = self
         appDelegate.bannerView.load(GADRequest())
@@ -28,6 +31,8 @@ class ViewController: UIViewController, GADBannerViewDelegate, CLLocationManager
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
+        } else if appDelegate.runUpdateLocationFunction == false {
+            reUpdateLocationButton.isHidden = false
         }
     }
 
@@ -35,6 +40,25 @@ class ViewController: UIViewController, GADBannerViewDelegate, CLLocationManager
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func reUpdateLocation(_ sender: UIButton) {
+        let alert = UIAlertController(title: "위치정보 갱신하기", message: "앱에 저장된 위치정보를 바꿀거니?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "아니", style: .cancel, handler: nil)
+        let OKAction = UIAlertAction(title: "응", style: .default) { (OKAction) in
+            self.appDelegate.runUpdateLocationFunction = true
+            self.locationManager.delegate = self
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            self.locationManager.requestWhenInUseAuthorization()
+            self.locationManager.startUpdatingLocation()
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(OKAction)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
