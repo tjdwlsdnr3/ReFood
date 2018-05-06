@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3D7CB05667940650CC2762B6 /* Pods_ReFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4237F20D6394A53904B9A3 /* Pods_ReFood.framework */; };
-		D91D7E29205E25110007DE57 /* Makgeolli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D7E28205E25100007DE57 /* Makgeolli.ttf */; };
 		D98506A8204A822000E829F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98506A7204A822000E829F4 /* AppDelegate.swift */; };
 		D98506AD204A822000E829F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98506AB204A822000E829F4 /* Main.storyboard */; };
 		D98506B0204A822000E829F4 /* ReFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D98506AE204A822000E829F4 /* ReFood.xcdatamodeld */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		657C0807E497EF4499440153 /* Pods-ReFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReFood/Pods-ReFood.release.xcconfig"; sourceTree = "<group>"; };
 		6B4237F20D6394A53904B9A3 /* Pods_ReFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D91D7E28205E25100007DE57 /* Makgeolli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Makgeolli.ttf; sourceTree = "<group>"; };
 		D98506A4204A822000E829F4 /* ReFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98506A7204A822000E829F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D98506AC204A822000E829F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		D98506A6204A822000E829F4 /* ReFood */ = {
 			isa = PBXGroup;
 			children = (
-				D91D7E28205E25100007DE57 /* Makgeolli.ttf */,
 				D9F2F07D20675B0C007DA6FE /* TmonMonsori.ttf */,
 				D98506A7204A822000E829F4 /* AppDelegate.swift */,
 				D98506AB204A822000E829F4 /* Main.storyboard */,
@@ -141,7 +138,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Studio Nuki";
 				TargetAttributes = {
 					D98506A3204A822000E829F4 = {
@@ -176,7 +173,6 @@
 				D98506B5204A822000E829F4 /* LaunchScreen.storyboard in Resources */,
 				D98506B2204A822000E829F4 /* Assets.xcassets in Resources */,
 				D9F2F07E20675B0C007DA6FE /* TmonMonsori.ttf in Resources */,
-				D91D7E29205E25110007DE57 /* Makgeolli.ttf in Resources */,
 				D98506AD204A822000E829F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +293,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -304,6 +301,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -354,6 +352,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -361,6 +360,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -396,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M7566672WY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M7566672WY;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

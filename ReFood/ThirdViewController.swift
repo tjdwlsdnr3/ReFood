@@ -12,9 +12,18 @@ import GoogleMobileAds
 class ThirdViewController: UIViewController, GADBannerViewDelegate {
 
     @IBOutlet var secondChoice: UIButton!
+    @IBOutlet var sweetButton: UIButton!
+    
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
+        if appDelegate.myChoice[1] == "간편식" {
+            sweetButton.setTitle("단맛", for: .normal)
+        } else {
+            sweetButton.setTitle("단짠맛", for: .normal)
+
+        }
+        
         addBannerViewToView(appDelegate.bannerView)
         appDelegate.bannerView.rootViewController = self
         appDelegate.bannerView.load(GADRequest())

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,11 +21,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcA-sJ-yJV">
-                                <rect key="frame" x="28" y="347.5" width="264" height="74.5"/>
+                                <rect key="frame" x="28" y="399.66666666666669" width="358" height="101"/>
                                 <color key="backgroundColor" red="0.22558152675628662" green="0.71182924509048462" blue="0.29202795028686523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EcA-sJ-yJV" secondAttribute="height" multiplier="319:90" id="vr4-I6-z6V"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="494-QY-TMr">
-                                <rect key="frame" x="28" y="143" width="264" height="73.5"/>
+                                <rect key="frame" x="28" y="143" width="358" height="99.666666666666686"/>
                                 <color key="backgroundColor" red="0.017039947211742401" green="0.65732485055923462" blue="0.62166488170623779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="494-QY-TMr" secondAttribute="height" multiplier="319:89" id="C1t-cC-aMd"/>
@@ -53,13 +53,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 식사시간이야" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPb-J4-IdC">
-                                <rect key="frame" x="43.5" y="61" width="233" height="39"/>
+                                <rect key="frame" x="90.666666666666686" y="61" width="233" height="39"/>
                                 <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKe-w6-NpR">
-                                <rect key="frame" x="28" y="245.5" width="264" height="73"/>
+                                <rect key="frame" x="28" y="271.66666666666669" width="358" height="99"/>
                                 <color key="backgroundColor" red="0.13529622554779053" green="0.71128690242767334" blue="0.45251560211181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZKe-w6-NpR" secondAttribute="height" multiplier="29:8" id="uh7-C8-PZW"/>
@@ -72,15 +72,26 @@
                                     <action selector="firstchoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uh6-ui-VTF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEK-l1-ryg">
+                                <rect key="frame" x="28" y="529.66666666666663" width="358" height="34"/>
+                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
+                                <state key="normal" title="위치정보 다시 받기"/>
+                                <connections>
+                                    <action selector="reUpdateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qnp-dA-4WQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="FEK-l1-ryg" firstAttribute="top" secondItem="EcA-sJ-yJV" secondAttribute="bottom" constant="29" id="AOb-dv-PGM"/>
+                            <constraint firstItem="FEK-l1-ryg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="B85-c1-tXR"/>
                             <constraint firstItem="ZKe-w6-NpR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="GYm-H5-5B5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="494-QY-TMr" secondAttribute="trailing" constant="28" id="SGt-QC-bWv"/>
                             <constraint firstItem="ZKe-w6-NpR" firstAttribute="top" secondItem="494-QY-TMr" secondAttribute="bottom" constant="29" id="TD0-Dc-K7a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZKe-w6-NpR" secondAttribute="trailing" constant="28" id="ZJn-oy-EXJ"/>
                             <constraint firstItem="EcA-sJ-yJV" firstAttribute="top" secondItem="ZKe-w6-NpR" secondAttribute="bottom" constant="29" id="bsr-kh-tu3"/>
                             <constraint firstItem="EcA-sJ-yJV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="dkC-Jm-gw9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FEK-l1-ryg" secondAttribute="trailing" constant="28" id="eMr-zQ-FY8"/>
                             <constraint firstItem="494-QY-TMr" firstAttribute="top" secondItem="DPb-J4-IdC" secondAttribute="bottom" constant="43" id="nP0-3w-HIu"/>
                             <constraint firstItem="DPb-J4-IdC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="s9b-s5-W7p"/>
                             <constraint firstItem="DPb-J4-IdC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="t5F-59-rFf"/>
@@ -91,46 +102,47 @@
                     </view>
                     <connections>
                         <outlet property="firstViewControllerButtons" destination="EcA-sJ-yJV" id="cXJ-Av-Uzk"/>
+                        <outlet property="reUpdateLocationButton" destination="FEK-l1-ryg" id="Xii-P2-Vjt"/>
                         <segue destination="2N7-2j-oK7" kind="show" identifier="goToSecondChoice" id="YjT-BU-znO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375.19999999999999" y="124.58770614692655"/>
+            <point key="canvasLocation" x="-376.875" y="123.59154929577466"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="rwE-Iz-c6l">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="2N7-2j-oK7" customClass="SecondViewController" customModule="ReFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wej-6I-6t5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤게 먹고싶어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-7M-fqJ">
-                                <rect key="frame" x="57.5" y="61" width="205" height="39"/>
+                                <rect key="frame" x="104.66666666666669" y="61" width="205" height="39"/>
                                 <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noe-Nz-wdD" userLabel="firstRow">
-                                <rect key="frame" x="30" y="144" width="260" height="124"/>
+                                <rect key="frame" x="30" y="144" width="354" height="168.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-RS-oSI">
-                                        <rect key="frame" x="136" y="0.0" width="124" height="124"/>
+                                        <rect key="frame" x="185.33333333333337" y="0.0" width="168.66666666666663" height="168.66666666666666"/>
                                         <color key="backgroundColor" red="0.0013447972014546394" green="0.66145944595336914" blue="0.61703550815582275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2tw-RS-oSI" secondAttribute="height" multiplier="1:1" id="nP7-8L-aAy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="27"/>
-                                        <state key="normal" title="식사">
+                                        <state key="normal" title="술안주">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="secondChoice:" destination="2N7-2j-oK7" eventType="touchUpInside" id="y99-pr-04P"/>
+                                            <action selector="goSideDish:" destination="2N7-2j-oK7" eventType="touchUpInside" id="0jB-sH-XPg"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dotcat" translatesAutoresizingMaskIntoConstraints="NO" id="twc-Ph-KxV">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="168.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="twc-Ph-KxV" secondAttribute="height" multiplier="67:50" id="YXB-PZ-yrT"/>
                                         </constraints>
@@ -148,24 +160,24 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvH-GL-ogM" userLabel="secondRow">
-                                <rect key="frame" x="30" y="296" width="260" height="124.5"/>
+                                <rect key="frame" x="30" y="340.66666666666669" width="354" height="169.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-2p-f96">
-                                        <rect key="frame" x="136" y="0.0" width="124" height="124.5"/>
+                                        <rect key="frame" x="185" y="0.0" width="169" height="169.33333333333334"/>
                                         <color key="backgroundColor" red="0.22817301750183105" green="0.76777774095535278" blue="0.33604249358177185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kyc-2p-f96" secondAttribute="height" multiplier="1:1" id="Chb-mK-fwO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="27"/>
-                                        <state key="normal" title="술안주">
+                                        <state key="normal" title="식사">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="goSideDish:" destination="2N7-2j-oK7" eventType="touchUpInside" id="etD-zl-pNH"/>
+                                            <action selector="secondChoice:" destination="2N7-2j-oK7" eventType="touchUpInside" id="Up9-pA-cpN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbZ-aF-OWI">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="124.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="169.33333333333334" height="169.33333333333334"/>
                                         <color key="backgroundColor" red="0.23499751091003418" green="0.80231142044067383" blue="0.54397433996200562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gbZ-aF-OWI" secondAttribute="height" multiplier="1:1" id="4iB-Pf-B9n"/>
@@ -191,10 +203,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZt-3d-eQJ" userLabel="thirdRow">
-                                <rect key="frame" x="30" y="448.5" width="260" height="56"/>
+                                <rect key="frame" x="30" y="538" width="354" height="76.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-Py-0ly">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="76.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TzG-Py-0ly" secondAttribute="height" multiplier="37:34" id="edq-oA-BLN"/>
                                         </constraints>
@@ -203,21 +215,12 @@
                                             <action selector="goBackToFirstChoice:" destination="2N7-2j-oK7" eventType="touchUpInside" id="yHl-45-KC9"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dotcat" translatesAutoresizingMaskIntoConstraints="NO" id="sB5-KX-GNI">
-                                        <rect key="frame" x="192" y="0.0" width="68" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="sB5-KX-GNI" secondAttribute="height" multiplier="41:34" id="8cp-C6-4gD"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="TzG-Py-0ly" secondAttribute="bottom" id="KYM-pj-GUs"/>
-                                    <constraint firstAttribute="bottom" secondItem="sB5-KX-GNI" secondAttribute="bottom" id="OGH-sq-fOr"/>
-                                    <constraint firstItem="sB5-KX-GNI" firstAttribute="top" secondItem="QZt-3d-eQJ" secondAttribute="top" id="SBF-JB-wa1"/>
                                     <constraint firstItem="TzG-Py-0ly" firstAttribute="leading" secondItem="QZt-3d-eQJ" secondAttribute="leading" id="Wwe-cf-Y3e"/>
                                     <constraint firstItem="TzG-Py-0ly" firstAttribute="top" secondItem="QZt-3d-eQJ" secondAttribute="top" id="eIS-XW-1pR"/>
-                                    <constraint firstAttribute="trailing" secondItem="sB5-KX-GNI" secondAttribute="trailing" id="qQE-G4-a2G"/>
                                     <constraint firstAttribute="width" secondItem="QZt-3d-eQJ" secondAttribute="height" multiplier="315:68" id="vnX-RD-3y7"/>
                                 </constraints>
                             </view>
@@ -239,9 +242,8 @@
                         <viewLayoutGuide key="safeArea" id="17H-WR-3pE"/>
                     </view>
                     <connections>
-                        <outlet property="diningButton" destination="2tw-RS-oSI" id="2EZ-a1-IJ8"/>
-                        <outlet property="drinkCat" destination="sB5-KX-GNI" id="USc-iO-eWG"/>
-                        <outlet property="drinkSideDish" destination="Kyc-2p-f96" id="KVs-yb-xLG"/>
+                        <outlet property="diningButton" destination="Kyc-2p-f96" id="Gmv-ue-IJq"/>
+                        <outlet property="drinkSideDish" destination="2tw-RS-oSI" id="nOs-Ed-Pi0"/>
                         <outlet property="goBackToFirst" destination="TzG-Py-0ly" id="cJB-TT-quT"/>
                         <segue destination="Isg-mG-yVp" kind="show" identifier="goToThirdChoice" id="GSF-kZ-YWE"/>
                         <segue destination="kRD-oK-jUt" kind="show" identifier="chooseSideDish" id="dTS-WL-Hnn"/>
@@ -249,32 +251,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8c-nT-glH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493.60000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="392" y="124"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="pX8-nr-V75">
             <objects>
                 <viewController id="Isg-mG-yVp" customClass="ThirdViewController" customModule="ReFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YZ9-pg-jhq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무슨 맛이 먹고싶어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caj-e1-Oaw">
-                                <rect key="frame" x="39.5" y="61" width="241" height="39"/>
+                                <rect key="frame" x="86.666666666666686" y="61" width="241" height="39"/>
                                 <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fj-V5-86O" userLabel="firstRow">
-                                <rect key="frame" x="28" y="147" width="264" height="69.5"/>
+                                <rect key="frame" x="28" y="147" width="358" height="101.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8i-QR-oHl">
-                                        <rect key="frame" x="96.5" y="0.0" width="70" height="69.5"/>
+                                        <rect key="frame" x="128.33333333333334" y="0.0" width="101" height="101.33333333333333"/>
                                         <color key="backgroundColor" red="0.16112363338470459" green="0.59326589107513428" blue="0.54526877403259277" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="I8i-QR-oHl" secondAttribute="height" multiplier="1:1" id="omF-aY-8t8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
                                         <state key="normal" title="매콤한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -283,13 +285,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-3a-nsf">
-                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="101.33333333333333"/>
                                         <color key="backgroundColor" red="0.16318303346633911" green="0.566986083984375" blue="0.66211342811584473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JgU-3a-nsf" secondAttribute="height" multiplier="1:1" id="EgJ-KZ-B4R"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
-                                        <state key="normal" title="얼큰한 맛">
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <state key="normal" title="얼큰시원맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -297,13 +299,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1W-FT-xWv">
-                                        <rect key="frame" x="194.5" y="0.0" width="69.5" height="69.5"/>
+                                        <rect key="frame" x="257.33333333333331" y="0.0" width="100.66666666666669" height="101.33333333333333"/>
                                         <color key="backgroundColor" red="0.0013447972014546394" green="0.66145944595336914" blue="0.61703550815582275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="q1W-FT-xWv" secondAttribute="height" multiplier="1:1" id="rKH-uy-B4v"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
-                                        <state key="normal" title="고소한 맛">
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <state key="normal" title="고소구수맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -326,15 +328,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fw-7X-nWX" userLabel="secondRow">
-                                <rect key="frame" x="28" y="246.5" width="264" height="70"/>
+                                <rect key="frame" x="28" y="278.33333333333331" width="358" height="101.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-ME-k3R">
-                                        <rect key="frame" x="194.5" y="0.0" width="69.5" height="70"/>
+                                        <rect key="frame" x="256.66666666666669" y="0.0" width="101.33333333333331" height="101.33333333333333"/>
                                         <color key="backgroundColor" red="0.51284384727478027" green="0.76323586702346802" blue="0.43025153875350952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VUa-ME-k3R" secondAttribute="height" multiplier="1:1" id="oSR-3u-KwP"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
                                         <state key="normal" title="새콤한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -343,12 +345,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmw-uP-M6a">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="101.33333333333333"/>
                                         <color key="backgroundColor" red="0.13529622554779053" green="0.71128690242767334" blue="0.45251560211181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Mmw-uP-M6a" secondAttribute="height" multiplier="1:1" id="Yd4-pn-BX7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
                                         <state key="normal" title="느끼한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -357,12 +359,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-iw-sgn">
-                                        <rect key="frame" x="97" y="0.0" width="70.5" height="70"/>
+                                        <rect key="frame" x="129" y="0.0" width="100.66666666666669" height="101.33333333333333"/>
                                         <color key="backgroundColor" red="0.99830871820449829" green="0.90013891458511353" blue="0.3009331226348877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ji0-iw-sgn" secondAttribute="height" multiplier="1:1" id="wnv-VH-ElL"/>
                                         </constraints>
-                                        <state key="normal" title=" "/>
+                                        <state key="normal" title=" " image="randomChoice"/>
                                         <connections>
                                             <action selector="thirdChoice:" destination="Isg-mG-yVp" eventType="touchUpInside" id="N3h-LK-Xum"/>
                                         </connections>
@@ -383,16 +385,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvx-e8-Yvw" userLabel="thirdRow">
-                                <rect key="frame" x="28" y="348.5" width="264" height="69.5"/>
+                                <rect key="frame" x="28" y="411.66666666666669" width="358" height="101.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-kD-rsq">
-                                        <rect key="frame" x="97" y="0.0" width="69" height="69.5"/>
+                                        <rect key="frame" x="128" y="0.0" width="101.33333333333331" height="101"/>
                                         <color key="backgroundColor" red="0.22903576493263245" green="0.70780760049819946" blue="0.28768986463546753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Lpu-kD-rsq" secondAttribute="height" multiplier="1:1" id="EMo-8S-did"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
-                                        <state key="normal" title="육고기 맛">
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <state key="normal" title="육고기맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -400,12 +402,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-6j-Bt2">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
                                         <color key="backgroundColor" red="0.0" green="0.40854710340499878" blue="0.21675091981887817" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kZg-6j-Bt2" secondAttribute="height" multiplier="1:1" id="rsC-1B-HiA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
                                         <state key="normal" title="담백한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -414,13 +416,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCr-ps-NP3">
-                                        <rect key="frame" x="194" y="0.0" width="70" height="69.5"/>
+                                        <rect key="frame" x="257.33333333333331" y="0.0" width="100.66666666666669" height="101"/>
                                         <color key="backgroundColor" red="0.0058935331180691719" green="0.57258355617523193" blue="0.2734220027923584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HCr-ps-NP3" secondAttribute="height" multiplier="1:1" id="MhM-zf-GIi"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
-                                        <state key="normal" title="단 맛">
+                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <state key="normal" title="단짠맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -443,14 +445,17 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-uZ-Oag" userLabel="fourthRow">
-                                <rect key="frame" x="28" y="446.5" width="264" height="56.5"/>
+                                <rect key="frame" x="28" y="541" width="358" height="76.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsO-gx-oiV">
-                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="76.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="PsO-gx-oiV" secondAttribute="height" multiplier="37:34" id="zNw-3y-Q7b"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <connections>
+                                            <action selector="goBackToSecond:" destination="Isg-mG-yVp" eventType="touchUpInside" id="qhI-fr-itk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -483,29 +488,30 @@
                     </view>
                     <connections>
                         <outlet property="secondChoice" destination="PsO-gx-oiV" id="33V-uf-hA1"/>
+                        <outlet property="sweetButton" destination="HCr-ps-NP3" id="u9p-e8-V7E"/>
                         <segue destination="kRD-oK-jUt" kind="show" identifier="goToResult" id="6pz-VU-mO2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vox-aB-oZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280.8" y="124.58770614692655"/>
+            <point key="canvasLocation" x="1149" y="124"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="OAf-id-Ten">
             <objects>
                 <viewController id="kRD-oK-jUt" customClass="ResultViewController" customModule="ReFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E1A-hc-aU7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x6n-cX-ktK">
-                                <rect key="frame" x="16" y="202" width="288" height="180"/>
+                                <rect key="frame" x="16" y="202" width="382" height="244.33333333333337"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x6n-cX-ktK" secondAttribute="height" multiplier="343:235" constant="25.276595744680833" id="qQq-il-Xr1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pC6-sB-zDT">
-                                <rect key="frame" x="16" y="132" width="288" height="37.5"/>
+                                <rect key="frame" x="16" y="132" width="382" height="37.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -519,15 +525,15 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 너 이거 먹어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcX-sb-u9F">
-                                <rect key="frame" x="16" y="61" width="289" height="39"/>
+                                <rect key="frame" x="16" y="61" width="383" height="39"/>
                                 <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUn-bM-uXa" userLabel="firstRow">
-                                <rect key="frame" x="17" y="432.5" width="286" height="57"/>
+                                <rect key="frame" x="17" y="497.33333333333331" width="380" height="75.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbW-HP-xZI">
-                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="75.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RbW-HP-xZI" secondAttribute="height" multiplier="37:34" id="ooI-Db-dSq"/>
                                         </constraints>
@@ -537,12 +543,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK5-6d-yxR">
-                                        <rect key="frame" x="216.5" y="0.0" width="69.5" height="57"/>
+                                        <rect key="frame" x="287.66666666666669" y="0.0" width="92.333333333333314" height="75.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UK5-6d-yxR" secondAttribute="height" multiplier="83:68" id="EN3-nU-Fwk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="27"/>
-                                        <state key="normal" title="List"/>
+                                        <state key="normal" title="List">
+                                            <color key="titleColor" red="0.22776161210000001" green="0.49284956000000002" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="goList:" destination="kRD-oK-jUt" eventType="touchUpInside" id="gFz-Jx-ILz"/>
                                         </connections>
@@ -590,13 +598,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Co-BH-1K6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2064.375" y="123.59154929577466"/>
+            <point key="canvasLocation" x="1943" y="124"/>
         </scene>
     </scenes>
     <resources>
         <image name="dotcat" width="1242" height="2208"/>
+        <image name="randomChoice" width="295" height="298"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6pz-VU-mO2"/>
+        <segue reference="dTS-WL-Hnn"/>
     </inferredMetricsTieBreakers>
 </document>

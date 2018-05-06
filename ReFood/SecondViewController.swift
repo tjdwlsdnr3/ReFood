@@ -16,11 +16,11 @@ class SecondViewController: UIViewController, GADBannerViewDelegate {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     let foodMenu = FoodMenu()
-    @IBOutlet var drinkCat: UIImageView!
     @IBOutlet var drinkSideDish: UIButton!
     @IBOutlet var goBackToFirst: UIButton!
     @IBOutlet var diningButton: UIButton!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addBannerViewToView(appDelegate.bannerView)
@@ -29,10 +29,8 @@ class SecondViewController: UIViewController, GADBannerViewDelegate {
         appDelegate.bannerView.delegate = self
         goBackToFirst.setBackgroundImage(#imageLiteral(resourceName: "goBack"), for: .normal)
         if appDelegate.myChoice[0] == "저녁" {
-            drinkCat.isHidden = true
             drinkSideDish.isHidden = false
         } else {
-            drinkCat.isHidden = false
             drinkSideDish.isHidden = true
         }
         if appDelegate.runUpdateLocationFunction == true {
