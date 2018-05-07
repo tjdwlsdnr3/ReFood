@@ -16,6 +16,7 @@ class ThirdViewController: UIViewController, GADBannerViewDelegate {
     
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
         if appDelegate.myChoice[1] == "간편식" {
             sweetButton.setTitle("단맛", for: .normal)
@@ -23,8 +24,6 @@ class ThirdViewController: UIViewController, GADBannerViewDelegate {
             sweetButton.setTitle("단짠맛", for: .normal)
 
         }
-        
-        addBannerViewToView(appDelegate.bannerView)
         appDelegate.bannerView.rootViewController = self
         appDelegate.bannerView.load(GADRequest())
         appDelegate.bannerView.delegate = self
@@ -35,10 +34,12 @@ class ThirdViewController: UIViewController, GADBannerViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        addBannerViewToView(appDelegate.bannerView)
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -59,7 +60,9 @@ class ThirdViewController: UIViewController, GADBannerViewDelegate {
     @IBAction func goBackToSecond(_ sender: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.myChoice.remove(at: 1)
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {

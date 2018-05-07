@@ -30,8 +30,8 @@ class ResultViewController: UIViewController, GADBannerViewDelegate, GADIntersti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         interstitial = createAndLoadInterstitial()
-        addBannerViewToView(appDelegate.bannerView)
         appDelegate.bannerView.rootViewController = self
         appDelegate.bannerView.load(GADRequest())
         appDelegate.bannerView.delegate = self
@@ -45,6 +45,10 @@ class ResultViewController: UIViewController, GADBannerViewDelegate, GADIntersti
 override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addBannerViewToView(appDelegate.bannerView)
     }
     
     func makeResultCollectionAndPicture() {
@@ -87,7 +91,7 @@ override func didReceiveMemoryWarning() {
                 searchKeyMenu = menuName.text!
                 switch searchKeyMenu {
                 case "떡튀순" :
-                    searchKeyMenu = "분식"
+                    searchKeyMenu = "분식집"
                 case "삼각김밥", "컵라면", "도시락", "핫도그", "샌드위치", "만두", "시리얼" :
                     searchKeyMenu = "편의점"
                 default :
@@ -126,13 +130,20 @@ override func didReceiveMemoryWarning() {
         print("restartmyChoice: \(appDelegate.myChoice)")
         print("restartResultCollection: \(resultCollection)")
         appDelegate.runUpdateLocationFunction = false //함수업데이트 값을 false로 처리.
-        performSegue(withIdentifier: "goRestart", sender: self)
+//        performSegue(withIdentifier: "goRestart", sender: self)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func goList(_ sender: UIButton) {
+        var searchAddress : String!
         
-        let searchAddress = "https://store.naver.com/restaurants/list?filterId=r07680109&menu=\(searchKeyMenu!)&query=\(appDelegate.myAddress) 맛집"
-        print(searchAddress)
+        switch searchKeyMenu {
+        case "분식집", "편의점" :
+            searchAddress = "http://m.search.naver.com/search.naver?query=\(appDelegate.myAddress) \(searchKeyMenu!)"
+        default :
+            searchAddress = "https://store.naver.com/restaurants/list?filterId=r07680109&menu=\(searchKeyMenu!)&query=\(appDelegate.myAddress) 맛집"
+        }
+        print(searchAddress!)
         if let encodedURL = searchAddress.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
             let url = URL(string: encodedURL) {
             let safariViewController = SFSafariViewController(url: url)
@@ -143,7 +154,7 @@ override func didReceiveMemoryWarning() {
         }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID : "ca-app-pub-3940256099942544/4411468910")
+        let interstitial = GADInterstitial(adUnitID : "ca-app-pub-4235264030733991/5627917508")
         interstitial.delegate = self
         interstitial.load(GADRequest())
         if interstitial.isReady {

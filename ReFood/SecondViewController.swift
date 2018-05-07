@@ -23,7 +23,7 @@ class SecondViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBannerViewToView(appDelegate.bannerView)
+        self.navigationController?.isNavigationBarHidden = true
         appDelegate.bannerView.rootViewController = self
         appDelegate.bannerView.load(GADRequest())
         appDelegate.bannerView.delegate = self
@@ -44,6 +44,12 @@ class SecondViewController: UIViewController, GADBannerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+    addBannerViewToView(appDelegate.bannerView)
+    
+    }
+    
+    
     @IBAction func secondChoice(_ sender: UIButton) {
         
         print(sender.currentTitle!)
@@ -54,7 +60,8 @@ class SecondViewController: UIViewController, GADBannerViewDelegate {
     
     @IBAction func goBackToFirstChoice(_ sender: UIButton) {
         appDelegate.myChoice.remove(at: 0)
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func goSideDish(_ sender: UIButton) {
@@ -74,8 +81,10 @@ class SecondViewController: UIViewController, GADBannerViewDelegate {
                 print("Success! Got the location data")
                 let locationJSON : JSON = JSON(response.result.value!)
                 print("\(locationJSON)")
+                let locationSI = locationJSON["documents"][0]["region_1depth_name"].stringValue
                 let locationGU = locationJSON["documents"][0]["region_2depth_name"].stringValue
-                self.appDelegate.myAddress = "\(locationGU)"
+                let locationDONG = locationJSON["documents"][0]["region_3depth_name"].stringValue
+                self.appDelegate.myAddress = "\(locationSI) \(locationGU) \(locationDONG)"
                 print("myAddress = \(self.appDelegate.myAddress)")
             } else {
                 print("Error: \(String(describing: response.result.error))")

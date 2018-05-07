@@ -20,12 +20,22 @@ class ViewController: UIViewController, GADBannerViewDelegate, CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.isNavigationBarHidden = true
         reUpdateLocationButton.isHidden = true
-        addBannerViewToView(appDelegate.bannerView)
         appDelegate.bannerView.rootViewController = self
         appDelegate.bannerView.load(GADRequest())
         appDelegate.bannerView.delegate = self
         
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addBannerViewToView(appDelegate.bannerView)
         if appDelegate.runUpdateLocationFunction == true {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -34,11 +44,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, CLLocationManager
         } else if appDelegate.runUpdateLocationFunction == false {
             reUpdateLocationButton.isHidden = false
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -171,6 +176,8 @@ class ViewController: UIViewController, GADBannerViewDelegate, CLLocationManager
     func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
         print("adViewWillLeaveApplication")
     }
+    
+    
     
    
 }
