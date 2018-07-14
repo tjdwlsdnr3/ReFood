@@ -24,6 +24,10 @@
 /* Begin PBXFileReference section */
 		657C0807E497EF4499440153 /* Pods-ReFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReFood/Pods-ReFood.release.xcconfig"; sourceTree = "<group>"; };
 		6B4237F20D6394A53904B9A3 /* Pods_ReFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92EB64220F9AC560000E42C /* g_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = g_Medium.ttf; sourceTree = "<group>"; };
+		D92EB64320F9AC580000E42C /* gV_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gV_Bold.ttf; sourceTree = "<group>"; };
+		D92EB64420F9AC590000E42C /* g_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = g_Bold.ttf; sourceTree = "<group>"; };
+		D92EB64520F9AC5A0000E42C /* g_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = g_Light.ttf; sourceTree = "<group>"; };
 		D98506A4204A822000E829F4 /* ReFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98506A7204A822000E829F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D98506AC204A822000E829F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,10 @@
 		D98506A6204A822000E829F4 /* ReFood */ = {
 			isa = PBXGroup;
 			children = (
+				D92EB64420F9AC590000E42C /* g_Bold.ttf */,
+				D92EB64520F9AC5A0000E42C /* g_Light.ttf */,
+				D92EB64220F9AC560000E42C /* g_Medium.ttf */,
+				D92EB64320F9AC580000E42C /* gV_Bold.ttf */,
 				D9F2F07D20675B0C007DA6FE /* TmonMonsori.ttf */,
 				D98506A7204A822000E829F4 /* AppDelegate.swift */,
 				D98506AB204A822000E829F4 /* Main.storyboard */,

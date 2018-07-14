@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ONm-aO-DAg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ONm-aO-DAg">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,6 +14,12 @@
         <array key="TmonMonsori.ttf">
             <string>TmonMonsoriBlack</string>
         </array>
+        <array key="g_Bold.ttf">
+            <string>GyeonggiTitleB</string>
+        </array>
+        <array key="g_Medium.ttf">
+            <string>GyeonggiTitleM</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -25,12 +31,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcA-sJ-yJV">
-                                <rect key="frame" x="28" y="443.66666666666669" width="358" height="101.00000000000006"/>
+                                <rect key="frame" x="28" y="435.66666666666669" width="358" height="101.00000000000006"/>
                                 <color key="backgroundColor" red="0.22558152675628662" green="0.71182924509048462" blue="0.29202795028686523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EcA-sJ-yJV" secondAttribute="height" multiplier="319:90" id="vr4-I6-z6V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="34"/>
                                 <state key="normal" title="저녁">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -39,12 +45,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="494-QY-TMr">
-                                <rect key="frame" x="28" y="187" width="358" height="99.666666666666686"/>
+                                <rect key="frame" x="28" y="179" width="358" height="99.666666666666686"/>
                                 <color key="backgroundColor" red="0.017039947211742401" green="0.65732485055923462" blue="0.62166488170623779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="494-QY-TMr" secondAttribute="height" multiplier="319:89" id="C1t-cC-aMd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="34"/>
                                 <state key="normal" title="아침">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -53,18 +59,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 식사시간이야" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPb-J4-IdC">
-                                <rect key="frame" x="90.666666666666686" y="105" width="233" height="39"/>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
+                                <rect key="frame" x="96" y="105" width="223" height="31"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleB" family="GyeonggiTitle" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKe-w6-NpR">
-                                <rect key="frame" x="28" y="315.66666666666669" width="358" height="99"/>
+                                <rect key="frame" x="28" y="307.66666666666669" width="358" height="99"/>
                                 <color key="backgroundColor" red="0.13529622554779053" green="0.71128690242767334" blue="0.45251560211181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZKe-w6-NpR" secondAttribute="height" multiplier="29:8" id="uh7-C8-PZW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="34"/>
                                 <state key="normal" title="점심">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -73,8 +79,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEK-l1-ryg">
-                                <rect key="frame" x="28" y="573.66666666666663" width="358" height="34"/>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="17"/>
+                                <rect key="frame" x="28" y="565.66666666666663" width="358" height="29"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="17"/>
                                 <state key="normal" title="위치정보 다시 받기"/>
                                 <connections>
                                     <action selector="reUpdateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qnp-dA-4WQ"/>
@@ -120,13 +126,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤게 먹고싶어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbO-7M-fqJ">
-                                <rect key="frame" x="104.66666666666669" y="105" width="205" height="39"/>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
+                                <rect key="frame" x="110.00000000000001" y="105" width="194.33333333333337" height="31"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleB" family="GyeonggiTitle" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noe-Nz-wdD" userLabel="firstRow">
-                                <rect key="frame" x="30" y="188" width="354" height="168.66666666666663"/>
+                                <rect key="frame" x="30" y="180" width="354" height="168.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-RS-oSI">
                                         <rect key="frame" x="185.33333333333337" y="0.0" width="168.66666666666663" height="168.66666666666666"/>
@@ -134,7 +140,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2tw-RS-oSI" secondAttribute="height" multiplier="1:1" id="nP7-8L-aAy"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="27"/>
                                         <state key="normal" title="술안주">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -161,7 +167,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvH-GL-ogM" userLabel="secondRow">
-                                <rect key="frame" x="30" y="384.66666666666669" width="354" height="169.33333333333331"/>
+                                <rect key="frame" x="30" y="376.66666666666669" width="354" height="169.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-2p-f96">
                                         <rect key="frame" x="185" y="0.0" width="169" height="169.33333333333334"/>
@@ -169,7 +175,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kyc-2p-f96" secondAttribute="height" multiplier="1:1" id="Chb-mK-fwO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="27"/>
                                         <state key="normal" title="식사">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -183,7 +189,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gbZ-aF-OWI" secondAttribute="height" multiplier="1:1" id="4iB-Pf-B9n"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="27"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="27"/>
                                         <state key="normal" title="간편식">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -204,7 +210,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZt-3d-eQJ" userLabel="thirdRow">
-                                <rect key="frame" x="30" y="582" width="354" height="76.333333333333371"/>
+                                <rect key="frame" x="30" y="574" width="354" height="76.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-Py-0ly">
                                         <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="76.333333333333329"/>
@@ -263,13 +269,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무슨 맛이 먹고싶어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caj-e1-Oaw">
-                                <rect key="frame" x="86.666666666666686" y="105" width="241" height="39"/>
-                                <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="31"/>
+                                <rect key="frame" x="92.666666666666686" y="105" width="229" height="31"/>
+                                <fontDescription key="fontDescription" name="GyeonggiTitleB" family="GyeonggiTitle" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fj-V5-86O" userLabel="firstRow">
-                                <rect key="frame" x="28" y="191" width="358" height="101.33333333333331"/>
+                                <rect key="frame" x="28" y="183" width="358" height="101.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8i-QR-oHl">
                                         <rect key="frame" x="128.33333333333334" y="0.0" width="101" height="101.33333333333333"/>
@@ -277,7 +283,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="I8i-QR-oHl" secondAttribute="height" multiplier="1:1" id="omF-aY-8t8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="14"/>
                                         <state key="normal" title="매콤한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -291,7 +297,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="JgU-3a-nsf" secondAttribute="height" multiplier="1:1" id="EgJ-KZ-B4R"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="14"/>
                                         <state key="normal" title="얼큰시원맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -305,7 +311,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="q1W-FT-xWv" secondAttribute="height" multiplier="1:1" id="rKH-uy-B4v"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="14"/>
                                         <state key="normal" title="고소구수맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -329,7 +335,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fw-7X-nWX" userLabel="secondRow">
-                                <rect key="frame" x="28" y="322.33333333333331" width="358" height="101.33333333333331"/>
+                                <rect key="frame" x="28" y="314.33333333333331" width="358" height="101.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-ME-k3R">
                                         <rect key="frame" x="256.66666666666669" y="0.0" width="101.33333333333331" height="101.33333333333333"/>
@@ -337,7 +343,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VUa-ME-k3R" secondAttribute="height" multiplier="1:1" id="oSR-3u-KwP"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleB" family="GyeonggiTitle" pointSize="14"/>
                                         <state key="normal" title="새콤한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -351,7 +357,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Mmw-uP-M6a" secondAttribute="height" multiplier="1:1" id="Yd4-pn-BX7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TmonMonsoriBlack" family="TmonMonsori" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleB" family="GyeonggiTitle" pointSize="14"/>
                                         <state key="normal" title="느끼한 맛">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -361,10 +367,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-iw-sgn">
                                         <rect key="frame" x="129" y="0.0" width="100.66666666666669" height="101.33333333333333"/>
-                                        <color key="backgroundColor" red="0.99830871820449829" green="0.90013891458511353" blue="0.3009331226348877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.98188811540603638" green="0.32338206271620262" blue="0.23105860256496938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ji0-iw-sgn" secondAttribute="height" multiplier="1:1" id="wnv-VH-ElL"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="GyeonggiTitleM" family="GyeonggiTitle" pointSize="17"/>
                                         <state key="normal" title=" " image="randomChoice"/>
                                         <connections>
                                             <action selector="thirdChoice:" destination="Isg-mG-yVp" eventType="touchUpInside" id="N3h-LK-Xum"/>
@@ -386,7 +393,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvx-e8-Yvw" userLabel="thirdRow">
-                                <rect key="frame" x="28" y="455.66666666666669" width="358" height="101.00000000000006"/>
+                                <rect key="frame" x="28" y="447.66666666666669" width="358" height="101.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-kD-rsq">
                                         <rect key="frame" x="128" y="0.0" width="101.33333333333331" height="101"/>
@@ -446,7 +453,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-uZ-Oag" userLabel="fourthRow">
-                                <rect key="frame" x="28" y="585" width="358" height="76.333333333333371"/>
+                                <rect key="frame" x="28" y="577" width="358" height="76.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsO-gx-oiV">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="76.333333333333329"/>

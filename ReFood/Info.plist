@@ -33,6 +33,10 @@
 	<string>어디서 먹을건지는 알려줘야지?</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>gV_Bold</string>
+		<string>g_Medium</string>
+		<string>g_Light</string>
+		<string>g_Bold</string>
 		<string>Makgeolli</string>
 		<string>TmonMonsori</string>
 	</array>
